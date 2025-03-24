@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Board</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Job Board</h1>
+        <input type="text" id="search" placeholder="Search jobs...">
+        <button onclick="searchJobs()">Search</button>
+    </header>
+
+    <main>
+        <h2>Featured Jobs</h2>
+        <div id="job-list">
+            <!-- Jobs will be added dynamically -->
+        </div>
+    </main>
+
+    <!-- Application Form Popup (Hidden Initially) -->
+    <div id="application-form" class="hidden">
+        <div class="form-container">
+            <h2>Apply for <span id="job-title"></span></h2>
+            <label>Name:</label>
+            <input type="text" id="applicant-name" required>
+            <label>Email:</label>
+            <input type="email" id="applicant-email" required>
+            <label>Upload Resume:</label>
+            <input type="file" id="resume" accept=".pdf" required>
+            <button onclick="submitApplication()">Submit</button>
+            <button class="close-btn" onclick="closeForm()">Close</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
